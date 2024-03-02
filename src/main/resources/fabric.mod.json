@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "too-cheap",
+	"version": "${version}",
+	"name": "Too Cheap!",
+	"description": "Removes annoying too expensive message and level cost restriction on anvils.",
+	"authors": [
+		"Sh4d0w"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/too-cheap"
+	},
+	"license": "MIT",
+	"icon": "assets/too-cheap/too-cheap-icon.png",
+	"environment": "*",
+	"mixins": [
+		"too-cheap.mixins.json",
+		{
+			"config": "too-cheap.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20",
+		"java": ">=17"
+	}
+}
