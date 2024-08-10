@@ -3,7 +3,8 @@
 	"package": "too.cheap.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"AnvilScreenHandlerMixin"
+		"AnvilScreenHandlerMixin",
+		"AnvilScreenMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

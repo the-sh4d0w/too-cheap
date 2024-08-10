@@ -1,4 +1,4 @@
-package too.cheap.mixin.client;
+package too.cheap.mixin;
 
 import net.minecraft.client.gui.screen.ingame.AnvilScreen;
 import org.spongepowered.asm.mixin.Mixin;

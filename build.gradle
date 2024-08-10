@@ -19,12 +19,10 @@ repositories {
 }
 
 loom {
-    splitEnvironmentSourceSets()
 
 	mods {
 		"too-cheap" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 
