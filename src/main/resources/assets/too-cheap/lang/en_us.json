@@ -1,0 +1,21 @@
+{
+  "text.autoconfig.too-cheap.title": "Too Cheap! Options",
+  "text.autoconfig.too-cheap.category.default": "Options",
+  "text.autoconfig.too-cheap.category.experimental": "Experimental",
+  "text.autoconfig.too-cheap.option.maxLevelCost": "Maximum Level Cost",
+  "text.autoconfig.too-cheap.option.maxLevelCost.@Tooltip": "The maximum level cost (exclusive) an anvil will allow.",
+  "text.autoconfig.too-cheap.option.breakChance": "Chance of Anvil Damage",
+  "text.autoconfig.too-cheap.option.breakChance.@Tooltip": "Chance that an anvil takes damage after being used.",
+  "text.autoconfig.too-cheap.option.doRenameCost": "Set Renaming Cost",
+  "text.autoconfig.too-cheap.option.doRenameCost.@Tooltip": "Set renaming cost if Yes.",
+  "text.autoconfig.too-cheap.option.renameCost": "Renaming Cost",
+  "text.autoconfig.too-cheap.option.renameCost.@Tooltip": "Set cost of renaming an item. Has to be greater than 0 or renaming is not possible.",
+  "text.autoconfig.too-cheap.option.doRepairCost": "Affect Repair Cost",
+  "text.autoconfig.too-cheap.option.doRepairCost.@Tooltip": "Affects repair cost if Yes.",
+  "text.autoconfig.too-cheap.option.maybeRepairCost": "Repair Cost",
+  "text.autoconfig.too-cheap.option.maybeRepairCost.@Tooltip": "Just adds to the base repair cost.",
+  "text.autoconfig.too-cheap.option.doEnchantmentCost": "Affect Enchantment Cost",
+  "text.autoconfig.too-cheap.option.doEnchantmentCost.@Tooltip": "Affects enchantment cost if Yes.",
+  "text.autoconfig.too-cheap.option.maybeEnchantmentCost": "Enchantment Cost",
+  "text.autoconfig.too-cheap.option.maybeEnchantmentCost.@Tooltip": "Just adds to the base enchantment cost."
+}
