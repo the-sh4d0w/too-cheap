@@ -36,7 +36,7 @@
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "minecraft": "~${minecraft_version}",
+    "minecraft": "${minecraft_version}",
     "cloth-config2": ">=${cloth_version}",
     "java": ">=17"
   },

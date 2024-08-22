@@ -27,6 +27,12 @@ public abstract class AnvilScreenHandlerMixin {
         return TooCheap.CONFIG.maxLevelCost - 1;
     }
 
+    // modify anvil break chance
+    @ModifyConstant(method = "method_24922(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V", constant = @Constant(floatValue = 0.12F))
+    private static float injectedBreakChance(float value) {
+        return TooCheap.CONFIG.breakChance;
+    }
+
     // modifies of initial value of i
     @ModifyVariable(method = "updateResult()V", at = @At("STORE"), ordinal = 0)
     private int injectedEnchantmentCost(int value) {
@@ -55,11 +61,5 @@ public abstract class AnvilScreenHandlerMixin {
         } else {
             return value;
         }
-    }
-
-    // modify anvil break chance
-    @ModifyConstant(method = "method_24922(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V", constant = @Constant(floatValue = 0.12F))
-    private static float injectedBreakChance(float value) {
-        return TooCheap.CONFIG.breakChance;
     }
 }
