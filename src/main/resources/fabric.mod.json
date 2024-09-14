@@ -1,28 +1,46 @@
 {
-	"schemaVersion": 1,
-	"id": "too-cheap",
-	"version": "${version}",
-	"name": "Too Cheap!",
-	"description": "Removes annoying too expensive message and level cost restriction on anvils.",
-	"authors": [
-		"Sh4d0w"
-	],
-	"contact": {
-		"homepage": "https://modrinth.com/mod/too-cheap"
-	},
-	"license": "MIT",
-	"icon": "assets/too-cheap/too-cheap-icon.png",
-	"environment": "*",
-	"mixins": [
-		"too-cheap.mixins.json",
-		{
-			"config": "too-cheap.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.14.22",
-		"minecraft": "1.21",
-		"java": ">=21"
-	}
+  "schemaVersion": 1,
+  "id": "too-cheap",
+  "version": "${mod_version}",
+  "name": "Too Cheap!",
+  "description": "Removes annoying Too Expensive! message and level cost restriction on anvils.",
+  "authors": [
+    "Sh4d0w"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/too-cheap",
+    "sources": "https://github.com/the-sh4d0w/too-cheap",
+    "issues": "https://github.com/the-sh4d0w/too-cheap/issues",
+    "discord": "https://discord.gg/4CaBuwEWKx"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/4CaBuwEWKx"
+      }
+    }
+  },
+  "license": "MIT",
+  "icon": "assets/too-cheap/too-cheap-icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "too.cheap.TooCheap"
+    ],
+    "modmenu": [
+      "too.cheap.config.gui.ModMenu"
+    ]
+  },
+  "mixins": [
+    "too-cheap.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}",
+    "cloth-config2": ">=${cloth_version}",
+    "java": ">=21"
+  },
+  "recommends": {
+    "modmenu": ">=${modmenu_version}"
+  }
 }
