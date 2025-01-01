@@ -1,13 +1,19 @@
 package too.cheap.mixin;
 
 import net.minecraft.screen.AnvilScreenHandler;
+import net.minecraft.screen.Property;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import too.cheap.TooCheap;
 
 @Mixin(AnvilScreenHandler.class)
 public abstract class AnvilScreenHandlerMixin {
+
+    @Shadow
+    @Final
+    private Property levelCost;
 
     // modify the next cost calculation
     @Inject(method = "getNextCost(I)I", at = @At("HEAD"), cancellable = true)
@@ -25,6 +31,13 @@ public abstract class AnvilScreenHandlerMixin {
     @ModifyConstant(method = "updateResult()V", constant = @Constant(intValue = 39))
     private int injectedMaxLevelReplace(int value) {
         return TooCheap.CONFIG.maxLevelCost - 1;
+    }
+
+    @Inject(method = "updateResult()V", at = @At("RETURN"))
+    private void injectedLevlCostCap(CallbackInfo ci) {
+        if (TooCheap.CONFIG.doLevelCostCap && this.levelCost.get() >= TooCheap.CONFIG.levelCostCap) {
+            this.levelCost.set(TooCheap.CONFIG.levelCostCap);
+        }
     }
 
     // modify anvil break chance
