@@ -46,6 +46,7 @@ public abstract class AnvilScreenHandlerMixin {
         return TooCheap.CONFIG.breakChance;
     }
 
+    // TODO: remove the experimental stuff
     // modifies of initial value of i
     @ModifyVariable(method = "updateResult()V", at = @At("STORE"), ordinal = 0)
     private int injectedEnchantmentCost(int value) {
