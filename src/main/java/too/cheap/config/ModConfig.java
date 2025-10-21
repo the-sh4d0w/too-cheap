@@ -11,6 +11,10 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public float breakChance = 0.12F;
     @ConfigEntry.Gui.Tooltip
+    public boolean doLevelCostCap = false;
+    @ConfigEntry.Gui.Tooltip
+    public int levelCostCap = 30;
+    @ConfigEntry.Gui.Tooltip
     public int nextCoefficient = 2;
     @ConfigEntry.Gui.Tooltip
     public int nextSummand = 1;
