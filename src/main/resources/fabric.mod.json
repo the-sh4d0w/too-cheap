@@ -38,7 +38,7 @@
     "fabricloader": ">=${loader_version}",
     "minecraft": ">=1.21.9 <=1.21.10",
     "cloth-config2": ">=${cloth_version}",
-    "java": ">=21"
+    "java": ">=25"
   },
   "recommends": {
     "modmenu": ">=${modmenu_version}"
